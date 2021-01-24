@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<FlowPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/8" fx:controller="com.very.controller.TodoListEditController">
+    <padding>
+        <Insets bottom="15.0" left="5.0" right="5.0" top="5.0"/>
+    </padding>
+    <children>
+        <VBox prefWidth="400" prefHeight="400" >
+            <HBox fx:id="hb_title" prefWidth="400" prefHeight="40" >
+                <Label fx:id="label_title" prefWidth="120" prefHeight="40" text="任务名称"/>
+                <TextField fx:id="title" prefWidth="280" prefHeight="40"/>
+            </HBox>
+
+            <HBox fx:id="hb_category" prefWidth="400" prefHeight="40"   >
+                <Label fx:id="label_category" prefWidth="120" prefHeight="40" text="分 类："/>
+                <ChoiceBox fx:id="category_choice" prefWidth="280" prefHeight="40"/>
+            </HBox>
+            <HBox fx:id="hb_content" prefWidth="400" prefHeight="80">
+                <Label fx:id="label_content" prefWidth="120" prefHeight="40" text="详 情："/>
+                <TextArea fx:id="content" prefWidth="280" prefHeight="80"/>
+            </HBox>
+
+            <HBox fx:id="hb_director" prefWidth="400" prefHeight="40">
+                <Label fx:id="label_director" prefWidth="120" prefHeight="40" text="负责人："/>
+                <TextField fx:id="director" prefWidth="280" prefHeight="40"/>
+            </HBox>
+            <HBox fx:id="hb_deadline" prefWidth="400" prefHeight="40">
+                <Label fx:id="label_deadline" prefWidth="120" prefHeight="40" text="截止日期："/>
+                <DatePicker fx:id="deadline" prefWidth="280" prefHeight="40"/>
+            </HBox>
+            <HBox fx:id="hb_quadrant" prefWidth="400" prefHeight="40">
+                <Label fx:id="label_quadrant" prefWidth="120" prefHeight="40" text="优先级："/>
+                <ChoiceBox fx:id="quadrant_choice" prefWidth="280" prefHeight="40"/>
+            </HBox>
+            <HBox fx:id="hb_remark" prefWidth="400" prefHeight="80">
+                <Label fx:id="label_remark" prefWidth="120" prefHeight="80" text="备注："/>
+                <TextArea fx:id="remark" prefWidth="280" prefHeight="80"/>
+            </HBox>
+            <HBox alignment="bottom_right" spacing="10" >
+                <Button styleClass="btn, btn-lg, btn-primary" text="确定" prefWidth="280" onAction="#add"/>
+            </HBox>
+            <HBox alignment="bottom_right" spacing="10" >
+            <Label fx:id="labelLoginResult" prefWidth="280" prefHeight="40" text="这里显示登录结果"/>
+            </HBox>
+        </VBox>
+    </children>
+
+</FlowPane>
